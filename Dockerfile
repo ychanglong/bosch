@@ -46,6 +46,8 @@ RUN . /app/venv/bin/activate
 # 在虚拟环境中安装依赖
 RUN pip install django --proxy http://10.187.215.117:3128 -v
 
+RUN pip install mysqlclient
+
 # 设置环境变量以使用虚拟环境中的 Python 和 pip
 #ENV PATH="/app/venv/bin:$PATH"
 
