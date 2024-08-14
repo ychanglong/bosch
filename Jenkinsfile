@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // 使用 Docker Compose 构建和启动服务
-                    sh 'docker-compose -f docker-compose.yml up -d --build'
+                    sh 'sudo docker-compose -f docker-compose.yml up -d --build'
                 }
             }
         }
@@ -26,8 +26,8 @@ pipeline {
             steps {
                 script {
                     // 运行数据库迁移
-                    sh 'docker-compose exec web python manage.py makemigrations'
-                    sh 'docker-compose exec web python manage.py migrate'
+                    sh 'sudo docker-compose exec web python manage.py makemigrations'
+                    sh 'sudo docker-compose exec web python manage.py migrate'
                 }
             }
         }
