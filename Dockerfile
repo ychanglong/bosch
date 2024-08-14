@@ -57,4 +57,4 @@ EXPOSE 8222
 # RUN python manage.py collectstatic --noinput
 
 # 执行数据库迁移和启动 Django 服务器
-CMD ["bash", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8222"]
+CMD ["bash", "-c", "python manage.py runserver 0.0.0.0:8222"]

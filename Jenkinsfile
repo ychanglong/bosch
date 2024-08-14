@@ -22,12 +22,11 @@ pipeline {
                 }
             }
         }
-        stage('Migrations') {
+        stage('Deploy') {
             steps {
                 script {
                     // 运行数据库迁移
-                    sh 'sudo docker-compose exec web python manage.py makemigrations'
-                    sh 'sudo docker-compose exec web python manage.py migrate'
+                    sh 'sudo docker-compose -f docker-compose.yml up -d'
                 }
             }
         }
