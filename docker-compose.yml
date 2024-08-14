@@ -3,10 +3,10 @@ version: '3.8'
 services:
   db:
     image: mysql:5.7
-    container_name: mysql
+    container_name: mysql_mike
     environment:
       MYSQL_ROOT_PASSWORD: '123456'
-      MYSQL_DATABASE: 'mydatabase'
+      MYSQL_DATABASE: 'mike'
       MYSQL_USER: 'myuser'
       MYSQL_PASSWORD: 'mypassword'
     ports:
