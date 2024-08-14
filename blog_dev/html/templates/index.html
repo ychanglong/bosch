@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'base.css' %}"/>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <script src="{% static 'popper.min.js' %}"></script>
+</head>
+<body>
+
+<header class="p-3 text-bg-danger border-bottom mb-3">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
+
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="#" class="nav-link px-2 text-white">首页</a></li>
+                <li><a href="#" class="nav-link px-2 text-white">发布博客</a></li>
+            </ul>
+
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-dark text-bg-white" placeholder="搜索..."
+                       aria-label="Search">
+            </form>
+
+            <div class="text-end">
+                <button type="button" class="btn btn-outline-primary me-2">登录</button>
+                <button type="button" class="btn btn-warning">注册</button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container bg-white p-3 rounded">
+    <h1>博客列表</h1>
+    <div class="row row-cols-2 row-gap-4">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <a href="#">Django基础知识</a>
+                </div>
+                <div class="card-body" style="height: 150px">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer text-body-secondary d-flex justify-content-between">
+                    <div>
+                        <img src="{% static 'avator.jpg' %}" class="rounded-circle" style="width:30px;height: 30px">
+                        知了课堂
+                    </div>
+                    <div>发布时间 2024-07-29</div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <a href="#">Django零基础到项目实战</a>
+                </div>
+                <div class="card-body" style="height: 150px">
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                </div>
+                <div class="card-footer text-body-secondary d-flex justify-content-between">
+                    <div>
+                        <img src="{% static 'avator.jpg' %}" class="rounded-circle" style="width:30px;height: 30px">
+                        知了课堂
+                    </div>
+                    <div>发布时间 2024-07-29</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+</body>
+</html>
