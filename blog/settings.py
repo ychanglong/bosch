@@ -76,9 +76,11 @@ WSGI_APPLICATION = 'blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': 'my.cnf',
-        }
+        'NAME': 'mike',
+        'USER': 'root',
+        'PASSWORD': '123456',
+        'HOST': 'db',  # Docker Compose 中的服务名称
+        'PORT': '3307',
     }
 }
 
